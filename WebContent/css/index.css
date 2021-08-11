@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  background: url(../images/background/sundown-1920x1293.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+body {
+  font-family: 'Zen Tokyo Zoo', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.main-header {
+  padding: 3.875rem 0.625rem;
+}
+.main-header h1 {
+  color: #feca57;
+  font-size: 3.25rem;
+  text-align: center;
+  text-shadow: 2px 4px 4px #000;
+}
+.main-section {
+  padding: 10px;
+}
+.button {
+  cursor: pointer;
+  height: 100px;
+  width: 250px;
+  margin: 0 auto;
+}
+.link {
+	display: flex;
+	align-items: center;		/* vertical */
+	justify-content: center;	/* horizontal */
+	background-color: #ee5253;
+	color: #fff;
+	font-size: 2rem;
+	width: 100%;
+	height: 100%;
+	text-shadow: 2px 4px #222f3e;
+}
+.button.start-game::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 6px solid #ee5253;
+  transition: top, right, bottom, left, 100ms ease-in-out;
+  z-index: -1;
+}
+.button.start-game:hover::before,
+.button.start-game:focus::before {
+  top: calc(6px * -2);
+  right: calc(6px * -2);
+  bottom: calc(6px * -2);
+  left: calc(6px * -2);
+}
+.floating {
+	animation: floating 2s infinite ease-in-out;
+}
+@keyframes floating {
+  50% {
+    transform: translateY(20px);
+  }
+}

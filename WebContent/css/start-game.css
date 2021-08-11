@@ -1,0 +1,649 @@
+/* styles are for screen 300px wide. media queries for larger screens. */
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	color: #222f3e;
+	font-family: 'Montserrat', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+.help-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	transition: transform 1s;
+	z-index: 10;
+}
+.owl-with-speech {
+	position: absolute;
+	width: 300px;
+	height: auto;
+	right: 0;
+	bottom: 0;
+}
+.speech-bubble {
+	background-color: #341f97;
+	border-radius: 1rem;
+	color: #feca57;
+	font-family: 'Indie Flower', 'Montserrat', serif;
+	font-size: 1.25rem;
+	margin-bottom: 0.625rem;
+	padding: 0.75rem;
+	position: relative;
+	width: 100%;
+}
+.speech-bubble::before {
+	content: '';
+	position: absolute;
+	border-top: 20px solid #341f97;
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	top: 196px;
+	left: 130px;
+}
+.speech-bubble strong {
+	color: #48dbfb;
+}
+.owl-wrap {
+	width: 154px;
+	height: 240px;
+	padding: 5px;
+	float: right;
+}
+.owl-img {
+	width: 100%;
+	height: 100%;
+}
+.blur {
+	filter: blur(10px);
+	transition: filter 800ms;
+}
+.remove-blur {
+	filter: blur(0);
+	transition: filter 800ms;
+}
+.slide-out {
+	transform: translateX(100%);
+}
+.slide-in {
+	transform: translateX(0);
+}
+.fa-leaf {
+	color: #008004;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	transition: transform 500ms;
+}
+.fa-leaf:hover,
+.fa-leaf:focus {
+	color: #00d907;
+	transform: rotateY(180deg);
+}
+.button.not-form .link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.floating {
+	animation: floating 2s infinite ease-in-out;
+}
+.button-wrap {
+	margin-bottom: 3rem;
+}
+.button {
+	display: flex;
+	align-items: center;		/* vertical */
+	justify-content: center;	/* horizontal */
+	width: 180px;
+	height: 72px;
+	margin: 0 auto;
+}
+.link {
+	background-color: #ff6b6b;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.25rem;
+	width: 100%;
+	height: 100%;
+	transition: background-color 500ms;
+}
+.link:hover,
+.link:focus {
+	background-color: #ee5253;
+}
+
+/* ----------------------------------- Navbar ----------------------------------- */
+
+.navbar {
+	background-color: #222f3e;
+	color: #fff;
+	font-family: 'Zen Tokyo Zoo', 'Montserrat', sans-serif;
+	font-size: 1.5rem;
+	display: flex;
+ 	justify-content: space-between;
+	align-items: center;
+}
+.brand-title a {
+	color: #00d907;
+	display: block;
+	font-size: 1.5rem;
+	padding: 1.125rem;
+}
+.navbar-links ul {
+	display: flex;
+}
+.navbar-links li {
+	list-style: none;
+}
+.navbar-links li a {
+	color: #feca57;
+	display: block;
+	padding: 1.5rem;
+	margin: 0 .5rem;
+}
+.navbar-links li:hover {
+	background-color: #555;
+}
+.toggle-button {
+	position: absolute;
+	top: 1.5rem;
+	right: 1rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 1.875rem;
+	height: 1.25rem;
+}
+.toggle-button .bar {
+	background-color: #fff;
+	border-radius: 1;
+	width: 100%;
+	height: 3px;
+}
+.animals-link .animals-list {
+	background-color: black;
+	position: absolute;
+	flex-direction: column;
+	display: none;
+	z-index: 100;
+}
+.animals-link .animals-list.display {
+	display: block;
+}
+
+/* ----------------------------------- Header (home) ----------------------------------- */
+
+.main-header {
+	background-color: #ededed;
+	color: #ff9f43;
+	padding: 1rem;
+	position: relative;
+	text-align: center;
+}
+.main-header h1 {
+	font-family: 'Zen Tokyo Zoo', 'Montserrat', sans-serif;
+	font-size: 3rem;
+	letter-spacing: .2rem;
+	padding: 2rem 0;
+	position: relative;
+	text-shadow: 4px 4px #222f3e;
+}
+.main-header p {
+	color: #1dd1a1;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.125rem;
+	padding-bottom: 2rem;
+	position: relative;
+}
+.wwf-link {
+	color: #54a0ff;
+}
+.wwf-link:hover,
+.wwf-link:focus {
+	color: #341f97;
+}
+.arrow {
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+.arrow span {
+	display: block;
+	padding-bottom: 1rem;
+}
+.arrow .fas {
+	font-size: 2rem;
+}
+
+/* ----------------------------------- Animals Section ----------------------------------- */
+
+.animals {
+	font-size: 1.125rem;
+	padding: 3rem 0;
+}
+.shaded {
+	background-color: #ededed;
+}
+.animal-article {
+	font-family: 'Montserrat', sans-serif;
+	padding: 1.5rem 0;
+	text-align: center;
+	width: 100%;
+}
+.animal-article .content {
+	width: 100%;
+	margin: 0 auto;
+}
+.animal-article picture {
+	display: block;
+	max-width: 100rem;  /* 1600px */
+	margin: 0 auto;
+}
+.animal-article picture img {
+	width: 100%;
+}
+.animal-article .description-container {
+	color: #222f3e;
+	padding: 1rem;
+}
+.animal-name {
+	font-size: 1.5rem;
+	padding: 1rem 0;
+}
+.animal-description {
+	line-height: 1.5;
+	text-align: left;
+}
+.habitat {
+	padding-bottom: .75rem;
+}
+.animals .last-article {
+	padding-bottom: 3rem;
+}
+.button-container {
+	padding: 1.5rem 0;
+}
+.animals .button {
+	margin-bottom: 0;
+}
+
+/* ----------------------------------- Footer (home) ----------------------------------- */
+
+footer {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	padding: 0 1rem;
+	text-align: center;
+}
+footer .disclaimer {
+	color: #1dd1a1;
+}
+footer .contacts {
+	font-size: 1.125rem;
+	padding: 3rem 0;
+}
+.contact-link {
+	color: #48dbfb;
+	margin: 0 1rem;
+	transition: color 300ms;
+}
+.contact-link:hover,
+.contact-link:focus {
+	color: #341f97;
+}
+
+/* ----------------------------------- game-questions page ----------------------------------- */
+
+.game-container {
+	font-family: 'Montserrat', sans-serif;
+	padding: 2rem 1rem;
+}
+.home-button {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+.end-game .fa-leaf {
+	font-size: 2rem;
+	margin: 0;
+}
+.question-container {
+	margin-bottom: 4rem;
+}
+.question {
+	font-size: 2rem;
+}
+.q-number {
+	color: #ff9f43;
+	font-family: 'Fredoka One', 'Montserrat', sans-serif;
+	font-size: 4rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	text-shadow: 2px 2px #222f3e;
+}
+.answer-button {
+	margin-bottom: 4rem;
+}
+.answer-button .button:hover,
+.answer-button .button:focus {
+	animation: 1s shake ease infinite;
+}
+
+/* ----------------------------------- wrong-guess page ----------------------------------- */
+
+.in-game-header {
+	font-family: 'Montserrat', sans-serif;
+	padding: 2rem;
+	text-align: center;
+}
+.in-game-header h1 {
+	font-size: 2rem;
+}
+.wrong-guess-list {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+.wrong-guess-list li {
+	border-top: 4px solid #008004;
+	list-style: none;
+	width: 100%;
+}
+.wrong-guess-list .last-item {
+	border-bottom: 4px solid #008004;
+}
+.wrong-guess-list li form {
+	display: flex;
+	align-items: center;		/* vertical */
+	justify-content: center;	/* horizontal */
+	width: 100%;
+	height: 100%;
+}
+.wrong-guess-list li form input {
+	background-color: #4dff00;
+	border: none;
+	cursor: pointer;
+	font-size: 1.25rem;
+	padding: 2rem 0;
+	width: 100%;
+	height: 100%;
+}
+.wrong-guess-list li form input:hover,
+.wrong-guess-list li form input:focus {
+	background-color: #e8fbe9;
+}
+
+/* ----------------------------------- result page ----------------------------------- */
+
+.result-msg {
+	color: #ee5253;
+}
+.correct-animal .button-container {
+	text-align: center;
+}
+.animal-description .why-they-matter {
+	color: #008004;
+}
+.thanks-msg {
+	color: #222f3e;
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-bottom: 2rem;
+}
+
+/* ----------------------------------- contact page ----------------------------------- */
+
+.contact-form {
+	width: 100%;
+}
+.contact-form fieldset {
+	border: 1px solid #c8d6e5;
+	border-radius: 0.625rem;
+	padding: 1.25rem;
+}
+.contact-form fieldset legend {
+	background-color: #c8d6e5;
+	border: 1px solid #8395a7;
+	border-radius: 0.625rem;
+	padding: 0.625rem 1.25rem;
+	text-align: left;
+	text-transform: uppercase;
+}
+.contact-form fieldset label {
+	text-align: left;
+	width: 100%;
+}
+.contact-form fieldset label input, .contact-form fieldset label textarea {
+	border: 1px solid #ababab;
+	border-radius: 0.75rem;
+	font-family: 'Montserrat', sans-serif;
+	width: 100%;
+	margin: 0.625rem 0;
+}
+.contact-form fieldset label input {
+	height: 28px;
+	padding: 5px;
+}
+.contact-form fieldset label textarea {
+	height: 112px;
+	padding: 5px;
+	resize: vertical;
+}
+.contact-form .input-submit {
+	background-color: #54a0ff;
+	border-style: none;
+	border-radius: 0.625rem;
+	color: #fff;
+	font-size: 1.125rem;
+	width: 100px;
+	height: 40px;
+	margin: 1rem 0 0;
+	transition: background-color 500ms;
+}
+.invalid-status {
+	color: red;
+	display: none;
+}
+.contact-form .input-submit:hover,
+.contact-form .input-submit:focus {
+	background-color: #2e86de;
+	cursor: pointer;
+}
+
+/* ----------------------------------- Media Queries ----------------------------------- */
+
+@media (max-height: 581px) and (orientation: landscape) {
+	.owl-with-speech {
+		bottom: auto;
+	}
+}
+@media (max-width: 500px) {
+	.toggle-button {
+		display: flex;
+	}
+	.navbar-links {
+		display: none;
+		width: 100%;
+	}
+	.navbar {
+		flex-direction: column;    /* stacks elements inside navbar top to bottom */
+		align-items: flex-start;   /* align elements to the left */
+	}
+	.navbar-links ul {
+		flex-direction: column;
+		width: 100%;
+	}
+	.navbar-links li {
+		text-align: center;
+	}
+	.navbar-links.active {
+		display: flex;
+	}
+	.animals-link .animals-list {
+		position: relative;
+	}
+	.animals-menu li {
+		display: block;
+	}
+}
+@media (min-width: 380px) {
+	.main-header h1 {
+		font-size: 4rem;
+	}
+}
+@media (min-width: 410px) {
+	.owl-with-speech {
+		width: 340px;
+	}
+	.owl-wrap {
+		width: 174px;
+		height: 270px;
+	}
+	.speech-bubble::before {
+		top: 166px;
+	}
+}
+@media (min-width: 506px) {
+	.animal-article .content {
+		width: 473px;
+	}
+	.in-game-header h1 {
+		font-size: 2.5rem;
+	}
+	.animal-name {
+		font-size: 1.875rem;
+	}
+	.animal-description {
+		font-size: 1.25rem;
+	}
+	.wrong-guess-list {
+		padding: 0;
+	}
+	.wrong-guess-list li form input {
+		font-size: 1.875rem;
+	}
+}
+@media (min-width: 610px) {
+	.owl-with-speech {
+		width: 506px;
+	}
+	.owl-wrap {
+		width: 258px;
+		height: 400px;
+	}
+	.speech-bubble::before {
+		top: 138px;
+		left: 200px;
+	}
+	.game-container {
+		padding-left: 0;
+		padding-right: 0;
+		width: 500px;
+		margin: 0 auto;
+	}
+}
+@media (min-width: 675px) {
+	.animal-article {
+		padding: 3rem 1rem;
+	}
+	.correct-animal .animal-article {
+		padding: 1rem 1rem 3rem;
+	}
+	.animal-article .content {
+		width: 630px;
+	}
+	.fa-leaf {
+		font-size: 2rem;
+	}
+	.fa-leaf.home-page-leaf {
+    	margin-bottom: 3rem;
+	}
+}
+@media (min-width: 810px) {
+ 	.owl-with-speech {
+		width: 672px;
+	}
+	.owl-wrap {
+		width: 343px;
+		height: 532px;
+	}
+	.speech-bubble::before {
+		top: 110px;
+		left: 300px;
+	}
+}
+@media (min-width: 900px) {
+	.main-header {
+		padding: 4rem;
+	}
+	.main-header .bg-tree {
+		top: -6rem;
+		left: -35rem;
+	}
+	.main-header h1 {
+		font-size: 5rem;
+	}
+	.main-header p, .animals {
+		padding-bottom: 4rem;
+	}
+	.arrow {
+		margin-bottom: 0;
+	}
+	.animal-article .content {
+		width: 840px;
+	}
+	.animal-article .description-container {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	.animals {
+		font-size: 1.25rem;
+	}
+	.animal-name {
+		font-size: 2.25rem;
+	}
+	.animal-description {
+		font-size: 1.5rem;
+	}
+	.button-container {
+		padding: 3rem 0;
+	}
+	.thanks-msg {
+		font-size: 1.875rem;
+	}
+}
+@media (min-width: 1200px) {
+	.animal-article .content {
+		width: 1120px;
+	}
+	.animal-article .description-container {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+/* ----------------------------------- Key Frames ----------------------------------- */
+
+@keyframes shake {
+	0% {
+		transform: rotate(2deg);
+	}
+	50% {
+		transform: rotate(-2deg);
+	}
+	100% {
+		transform: rotate(3deg);
+	}
+}
+@keyframes floating {
+	50% {
+		transform: translateY(20px);
+	}
+}
