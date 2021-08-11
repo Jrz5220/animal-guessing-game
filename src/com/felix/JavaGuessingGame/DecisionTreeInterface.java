@@ -2,7 +2,6 @@ package com.felix.JavaGuessingGame;
 
 /**
  * An interface that specifies operations of a binary decision tree.
- * @author felix lazo
  * @param <T> The type of data in the node of the tree.
  */
 public interface DecisionTreeInterface<T> {
