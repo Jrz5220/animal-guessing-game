@@ -319,7 +319,7 @@
 				</div>
 				<div class="contacts">
 					<a class="contact-link" href="https://www.linkedin.com/home"><i class="fab fa-linkedin"></i></a>
-					<a class="contact-link" href="https://github.com/Jrz5220"><i class="fab fa-github"></i></a>
+					<a class="contact-link" href="https://github.com/Jrz5220/animal-guessing-game"><i class="fab fa-github"></i></a>
 					<a class="contact-link" href="${pageContext.request.contextPath}/contact.jsp"><i class="fas fa-envelope"></i></a>
 				</div>
 			</footer>
